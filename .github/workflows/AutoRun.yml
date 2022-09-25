@@ -1,7 +1,7 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
-name: CVE-Monitor
+name: Github-CVE
 
 on:
   release:
@@ -32,7 +32,7 @@ jobs:
         pip install lxml
         pip install python-telegram-bot
     
-    - name: Monitor CVE
+    - name: Github-CVE
       env: 
          SCKEY: ${{ secrets.SCKEY }}
          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
